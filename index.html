@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bits and Atoms</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="animacion.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="square-container">
+        <div id="square"></div>
+    </div>
+    <div>
+        <div id="main-content-wrapper"> </div>
+    </div>
+        <nav>
+            <div class="nav-container">
+                <!-- Contenedor del logo alineado a la izquierda -->
+                <div class="logo-container">
+                    <img src="img/logo.png" alt="Logo" class="logo-image">
+                    <h1 class="logo">Bits and Atoms</h1>
+                </div>
+                <!-- Menú de navegación centrado -->
+                <div class="menu-container">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#programa">Programa</a></li>
+                        <li><a href="#mentores">Mentores</a></li>
+                        <!-- <li><a href="#proyectos">Proyectos</a></li> -->
+                        <li><a href="#preguntas">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+        <div class="container">
+                    <div class="card" id="imagenVision">
+                <img src="img/img_brazo.webp" alt="Imagen de decoracion">
+            </div>
+            <div class="card" id="nosotros" onclick="toggleText(this)">
+                <div class="card-content">
+                    <h2 class="text-original">Nosotros</h2>
+                    <p class="text-new" style="display:none;">
+                        <b>Nosotros</b> <br><br><br>
+                        Ofrecemos una <b>formación de alto nivel en IA + IoT</b>, diseñada para preparar a los
+                        futuros líderes de esta transformación digital. <br><br>
+                        Con plazas muy limitadas, buscamos a los candidatos más prometedores y comprometidos, aquellos que
+                        no solo poseen habilidades técnicas, sino también las soft skills y la creatividad necesarias para
+                        destacar y marcar la diferencia en este campo en constante evolución.
+                    </p>
+                </div>
+            </div>
+            <div class="card" id="programa" onclick="toggleText(this)">
+                <div class="card-content">
+                    <h2 class="text-original">Programa</h2>
+                    <p class="text-new" style="display:none;">
+                        <b>Programa</b> <br><br><br>
+                        Nuestro programa de formación ofrece una <b> educación
+                            integral en IA e IoT</b>, combinando <b>teoría y práctica</b> de manera presencial en un entorno
+                        de <b>aprendizaje dinámico y colaborativo.</b>
+                        <br><br>Colaboramos con <b>empresas líderes</b> que comparten nuestra visión y apoyan la formación
+                        ofreciendo <b>becas para los estudiantes</b> seleccionados cada curso, y a su vez ofrecen la
+                        oportunidad de conocer el día a día participando en <b>proyectos reales en un entorno
+                            profesional.</b> <br> <br>
+                            <a href="programa.html" class="colorLink">Más info</a>
+                </div>
+            </div>
+            <div class="card" id="imagenEstudio">
+                <img src="img/img_estudio.webp" alt="Imagen de decoracion">
+            </div>
+
+        </div>
+        <section class="MVV">
+            <div class="card narrow-card" onclick="toggleText(this)">
+                <div class="card-content">
+                    <h3 class="text-original">Misión</h3>
+                    <h2 class="text-new" style="display:none;"><br> Nuestra Misión <br></h2>
+                    <p class="text-new" style="display:none;">En nuestro centro seguimos la metodología "learning by doing",
+                        ofrecemos educación práctica en IA e IoT. Con el apoyo de patrocinadores, brindamos formación
+                        avanzada gratuita, preparando a futuros líderes y profesionales para contribuir en sus empresas.
+                </div>
+            </div>
+
+            <div class="card narrow-card" onclick="toggleText(this)">
+                <div class="card-content">
+                    <h3 class="text-original">Visión</h3>
+                    <h2 class="text-new" style="display:none;">Nuestra Visión</h2>
+                    <p class="text-new" style="display:none;">Ofrecemos formación en inteligencia artificial y el internet
+                        de las cosas.
+                        Colaboramos con líderes de la industria preparando a nuestros estudiantes para sobresalir en un
+                        mercado
+                        laboral en constante evolución y liderar la próxima revolución tecnológica.
+                </div>
+            </div>
+
+            <div class="card narrow-card" onclick="toggleText(this)">
+                <div class="card-content">
+                    <h3 class="text-original">Valores</h3>
+                    <h2 class="text-new" style="display:none;">Nuestros Valores</h2>
+                    <p class="text-new" style="display:none;">Fomentamos la innovación y el pensamiento creativo,
+                        buscamos la excelencia académica, colaboramos estrechamente con la industria,
+                        promovemos la inclusividad y actuamos con integridad y responsabilidad en todas nuestras acciones.
+                </div>
+            </div>
+        </section>
+        <section class="texto-valores">
+            <div class="texto-valores">
+                <h3>Si compartes nuestra <b class="grande">misión</b>, nuestra <b class="grande">visión</b> y nuestros <b
+                        class="grande">valores</b> envíanos tu candidatura.</h3> <br>
+            </div>
+        </section>
+        <div class="texto-botones">
+            <a href="https://forms.gle/H7F8vbjuasBFwNzW8" class="btn" id="btn_titulo" target="_blank"><b>Envía tu
+                    candidatura</b></a>
+        </div>
+        <!-- Sección Galería Fotográfica -->
+        <section class="galeria">
+            <div class="galeriaFotografica">
+                <h2>Galería Fotográfica</h2>
+                <div class="imagen-destacada">
+                    <button class="prev" onclick="prevImage()">&#10094;</button>
+                    <img id="imagen-destacada" src="img/img_estudio.webp" alt="Imagen destacada">
+                    <div id="descripcion-imagen" class="descripcion">Zona de Pinball</div>
+                    <button class="next" onclick="nextImage()">&#10095;</button>
+                </div>
+                <div class="carrete">
+                    <div class="imagen-pequena" onclick="showImage(0)">
+                        <img src="img/img_estudio.webp" alt="Imagen 2">
+                    </div>
+                    <div class="imagen-pequena" onclick="showImage(1)">
+                        <img src="img/img_pinball.webp" alt="Imagen 1">
+                    </div>
+                    <div class="imagen-pequena" onclick="showImage(2)">
+                        <img src="img/img_claqueta.webp" alt="Imagen 3">
+                    </div>
+                    <div class="imagen-pequena" onclick="showImage(3)">
+                        <img src="img/img_brazo.webp" alt="Imagen 4">
+                    </div>
+                    <div class="imagen-pequena" onclick="showImage(4)">
+                        <img src="img/img_cocina.webp" alt="Imagen 5">
+                    </div>
+                    <div class="imagen-pequena" onclick="showImage(5)">
+                        <img src="img/img_cocina2.webp" alt="Imagen 6">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mentores" id="mentores">
+            <h2>Mentores</h2>
+            <div class="cartas">
+                <div class="card-mentores" onmouseover="setupTextToggle(this)" onmouseout="setupTextToggle(this)">
+                    <div class="card-content-mentores">
+                        <h3 class="text-original">Jordi Palou</h3>
+                        <h4 class="text-original">IoT</h4>
+                        <h3 class="new-text-new" style="display:none;">
+                            Integra el mundo físico con el digital creando soluciones inteligentes a través del Internet de
+                            las Cosas.
+                        </h3>
+                    </div>
+                </div>
+                <div class="card-mentores" onmouseover="setupTextToggle(this)" onmouseout="setupTextToggle(this)">
+                    <div class="card-content-mentores">
+                        <h3 class="text-original">Marc Segarra</h3>
+                        <h4 class="text-original">Creatividad</h4>
+                        <h3 class="new-text-new" style="display:none;">
+                            Explora y expande los límites de tu imaginación, convirtiendo ideas innovadoras en realidades
+                            impactantes.
+                        </h3>
+                    </div>
+                </div>
+        </section>
+        <section class="mentores">
+            <div class="cartas">
+                <div class="card-mentores" onmouseover="setupTextToggle(this)" onmouseout="setupTextToggle(this)">
+                    <div class="card-content-mentores">
+                        <h3 class="text-original">Skain</h3>
+                        <h4 class="text-original">Producción y Streaming</h4>
+                        <h3 class="new-text-new" style="display:none;">
+                            Descubre cómo transformar historias en experiencias visuales cautivadoras a través del arte del
+                            streaming.
+                        </h3>
+                    </div>
+                </div>
+                <div class="card-mentores" onmouseover="setupTextToggle(this)" onmouseout="setupTextToggle(this)">
+                    <div class="card-content-mentores">
+                        <h3 class="text-original">Carles Mayans</h3>
+                        <h4 class="text-original">Marketing 3.0</h4>
+                        <h3 class="new-text-new" style="display:none;">
+                            Aprende a conectar con tus clientes a un nivel emocional y ético, utilizando las estrategias
+                            avanzadas del marketing 3.0
+                        </h3>
+                    </div>
+                </div>
+        </section>
+        <section class="mentores">
+            <div class="cartas">
+                <div class="card-mentores" onmouseover="setupTextToggle(this)" onmouseout="setupTextToggle(this)">
+                    <div class="card-content-mentores">
+                        <h3 class="text-original">Juan Antonio Dominguez</h3>
+                        <h4 class="text-original">Producción y Postproducción Audiovisual</h4>
+                        <h3 class="new-text-new" style="display:none;">
+                            Da vida a tus ideas con excelencia técnica y creatividad, dominando cada etapa de la producción
+                            y postproducción audiovisual.
+                        </h3>
+                    </div>
+                </div>
+                <div class="card-mentores" onmouseover="setupTextToggle(this)" onmouseout="setupTextToggle(this)">
+                    <div class="card-content-mentores">
+                        <h3 class="text-original">Ivan Rodriguez</h3>
+                        <h4 class="text-original">Web 3.0</h4>
+                        <h3 class="new-text-new" style="display:none;">
+                            Impulsa la próxima revolución digital construyendo aplicaciones y servicios Blockchain en la web
+                            3.0 descentralizada.
+                        </h3>
+                    </div>
+                </div>
+        </section>
+        <section class="mentores">
+            <div class="cartas">
+                <div class="card-mentores" onmouseover="setupTextToggle(this)" onmouseout="setupTextToggle(this)">
+                    <div class="card-content-mentores">
+                        <h3 class="text-original">Daniel Vidal</h3>
+                        <h4 class="text-original">Propiedad intelectual</h4>
+                        <h3 class="new-text-new" style="display:none;">
+                            Protege y maximiza el valor de tus innovaciones y creaciones con una sólida estrategia de propiedad intelectual.
+                        </h3>
+                    </div>
+                </div>
+                <div class="card-mentores" onmouseover="setupTextToggle(this)" onmouseout="setupTextToggle(this)">
+                    <div class="card-content-mentores">
+                        <h3 class="text-original">Juan Carlos Exposito</h3>
+                        <h4 class="text-original">Ecommerce</h4>
+                        <h3 class="new-text-new" style="display:none;">
+                            Revoluciona el comercio electrónico con estrategias disruptivas que potencian el crecimiento y la satisfacción del cliente.
+                            </h3>
+                    </div>
+                </div>
+        </section>
+        <section class="mentores">
+            <div class="cartas">
+                <div class="card-mentores" onmouseover="setupTextToggle(this)" onmouseout="setupTextToggle(this)">
+                    <div class="card-content-mentores">
+                        <h3 class="text-original">Carlos Silva</h3>
+                        <h4 class="text-original">Entrepreneurship</h4>
+                        <h3 class="new-text-new" style="display:none;">
+                            Emprende con confianza y creatividad, desarrollando proyectos que transformen el futuro.
+                        </h3>
+                    </div>
+                </div>
+                <div class="card-mentores" onmouseover="setupTextToggle(this)" onmouseout="setupTextToggle(this)">
+                    <div class="card-content-mentores">
+                        <h3 class="text-original">Oriol Sirt</h3>
+                        <h4 class="text-original">Ciberseguridad</h4>
+                        <h3 class="new-text-new" style="display:none;">
+                            Defiende tus datos y sistemas con las técnicas más avanzadas en ciberseguridad, garantizando protección en el mundo digital.
+                            </h3>
+                    </div>
+                </div>
+        </section>
+        </section>
+
+        <section class="galeria" id="proyectos">
+            <div class="galeriaFotografica">
+                <h2>Proyectos</h2>
+                <div class="carrete">
+                    <div class="imagen-pequena" onclick="showImage(0)">
+                        <!-- <a href="proyectos.html"> -->
+                            <img src="img/fatboyHarley.png" alt="Imagen 2">
+                        </a>
+                        <p> FatBoy Harley</p>
+                    </div>
+                    <div class="imagen-pequena" onclick="showImage(1)">
+                        <!-- <a href="proyectos.html"> -->
+                            <img src="img/glorificador.png" alt="Imagen 1">
+                        </a>
+                        <p> Glorificador</p>
+                    </div>
+                    <div class="imagen-pequena" onclick="showImage(2)">
+                        <!-- <a href="proyectos.html"> -->
+                        <img src="img/img_claqueta.webp" alt="Imagen 3">
+                        </a>
+                        <p> Glorificador</p>
+                    </div>
+                    <div class="imagen-pequena" onclick="showImage(3)">
+                        <!-- <a href="proyectos.html"> -->
+                            <img src="img/img_brazo.webp" alt="Imagen 4">
+                        </a>
+                        <p> Glorificador</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+
+        <section id="rotativa">
+            <div class="perfiles">
+                <h2>Perfiles</h2>
+            </div>
+            <div class="textoPerfiles">
+                En este proyecto son bienvenidos <b>perfiles muy diversos y multidisciplinarios.</b><br> Esta variedad
+                de profesionales permite combinar <b>habilidades técnicas, creativas y de gestión,</b> cruciales
+                para desarrollar, implementar y mantener soluciones innovadoras en IA e IoT. <br>
+                No te preocupes si no tienes experiencia, buscamos perfiles jóvenes con ganas de aprender. Si ese es
+                tu caso, nuestro programa es ideal para ti.</p>
+            </div>
+
+            <div class="rotating-text" id="rotating-text"></div>
+        </section>
+
+        <!-- Sección Preguntas Frecuentes -->
+        <section class="preguntas" id="preguntas">
+            <div class="FAQ">
+
+                <h2>Preguntas Frecuentes</h2>
+                <!-- Sección Sobre el Instituto -->
+                <div class="bloque">
+                    <h3 class="bloque-titulo">Sobre el Instituto</h3>
+
+                    <div class="pregunta">
+                        <h5>
+                            ¿Qué diferencia al Instituto Europeo de Inteligencia Artificial en comparación con otros
+                            centros
+                            educativos en IA e IoT? <span class="icono">&#9662;</span>
+                        </h5>
+                        <div class="respuesta">
+                            <p>El Instituto Europeo de Inteligencia Artificial se destaca por su enfoque de aprendizaje
+                                experiencial "learning by doing" y su estrecha colaboración con la industria. Esto
+                                asegura
+                                que los estudiantes reciban una educación relevante y actualizada.
+                                <br>Además, cuenta con el respaldo de importantes empresas del sector tecnológico,
+                                proporcionando a los alumnos un contacto directo con el mundo profesional.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pregunta">
+                        <h5>¿El Instituto Europeo de Inteligencia Artificial cuenta con instalaciones para el desarrollo
+                        <br>
+                            de
+                            proyectos prácticos?<span class="icono">&#9662;</span></h5>
+                        <div class="respuesta">
+                            <p>Sí, el Instituto Europeo de Inteligencia Artificial cuenta con instalaciones como un Fab
+                                Lab,
+                                un taller de mecatrónica, sala de impresión 3D y un estudio de producción audiovisual,
+                                diseñados para el desarrollo de proyectos prácticos e innovadores.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección Programa de Formación -->
+                <div class="bloque">
+                    <h3 class="bloque-titulo">Programa de Formación</h3>
+
+                    <div class="pregunta">
+                        <h5>¿Cuánto tiempo dura el programa de formación?<span class="icono">&#9662;</span></h5>
+                        <div class="respuesta">
+                            <p>El programa está ideado para tener una duración de 1 año donde se realiza la parte
+                                teórica y
+                                la parte práctica tanto en el centro de estudios como en empresas.</p>
+                        </div>
+                    </div>
+
+                    <div class="pregunta">
+                        <h5>¿Cuánto cuesta el programa de formación?<span class="icono">&#9662;</span></h5>
+                        <div class="respuesta">
+                            <p>El programa puede llegar a ser completamente gratuito para los estudiantes, ya que los
+                                gastos
+                                son cubiertos por empresas patrocinadoras. Esto permite que los alumnos se concentren en
+                                su
+                                formación sin preocuparse por los costos.</p>
+                        </div>
+                    </div>
+
+                    <div class="pregunta">
+                        <h5>¿Cuáles son las áreas de especialización que ofrecemos?<span class="icono">&#9662;</span>
+                        </h5>
+                        <div class="respuesta">
+                            <p>Nos especializamos en Inteligencia Artificial y IoT, ofreciendo programas de formación en
+                                estas áreas para preparar a los estudiantes para el mercado laboral actual y futuro.</p>
+                        </div>
+                    </div>
+
+                    <div class="pregunta">
+                        <h5>¿Cómo se organiza la combinación de formación teórica y prácticas en empresas?<span
+                                class="icono">&#9662;</span></h5>
+                        <div class="respuesta">
+                            <p>Los estudiantes reciben formación teórica por las mañanas en nuestras instalaciones y
+                                realizan prácticas en empresas patrocinadoras por las tardes. Esta estructura garantiza
+                                una
+                                integración perfecta entre la teoría y la práctica, preparando a los alumnos para el
+                                entorno
+                                laboral real.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección Proceso de Selección -->
+                <div class="bloque">
+                    <h3 class="bloque-titulo">Proceso de Selección</h3>
+
+                    <div class="pregunta">
+                        <h5>¿Cuál es el proceso de selección de alumnos?<span class="icono">&#9662;</span></h5>
+                        <div class="respuesta">
+                            <p>El proceso de selección comienza con la cumplimentación de un formulario de solicitud, el
+                                cual se encuentra disponible en nuestra página web.
+                                Los candidatos que superan esta etapa son invitados a una entrevista presencial, donde
+                                evaluamos su idoneidad, motivación y aptitudes para el programa de formación en IA e
+                                IoT.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pregunta">
+                        <h5>¿Qué perfil de alumno encaja en el Instituto Europeo de Inteligencia Artificial?<span
+                                class="icono">&#9662;</span></h5>
+                        <div class="respuesta">
+                            <p>En este proyecto son bienvenidos perfiles muy diversos y multidisciplinarios. Esto
+                                incluye
+                                perfiles técnicos relacionados con la tecnología, perfiles creativos, perfiles de
+                                gestión de
+                                proyectos, de marketing...
+                                <br>Tenemos especial interés en atraer nuevos talentos, por lo que si no tienes mucha
+                                experiencia pero sí muchas ganas de aprender, este es tu sitio.
+                                <br>Cada perfil contribuye con habilidades y conocimientos únicos, esenciales para el
+                                desarrollo, implementación y mantenimiento de nuestras soluciones tecnológicas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="texto-valores">
+            <h3>Aprende haciendo, innova creando</h3>
+        </div>
+
+        <div class="texto-botones">
+            <a href="https://forms.gle/H7F8vbjuasBFwNzW8" class="btn" id="btn_titulo" target="_blank"><b>Envía tu
+                    candidatura</b></a>
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="footer-text">Copyright © 2024 Instituto Europeo IA - Todos los derechos reservados.</p>
+            <p class="footer-text">Contáctanos: <a href="mailto:info@ieu.ai">info@ieu.ai</a></p>
+            <p class="footer-text">Carrer de Bretón de los Herreros, 9, Gràcia, 08012 Barcelona</p>
+        </footer>
+    
+        <script src="animacion.js"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>

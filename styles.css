@@ -1,0 +1,844 @@
+@font-face {
+    font-family: 'Computo Monospace';
+    src: url('fonts/ComputoMonospace.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Figtree', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+html, body {
+    height: 100%;
+    scroll-behavior: smooth; /* Suaviza el scroll */
+}
+
+/* Asegurar que el contenedor principal ocupe toda la pantalla */
+#square-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la ventana */
+    overflow: hidden;
+}
+
+
+/* Estilo para la animación */
+#square {
+    background: url('img/anim.gif') no-repeat center center;
+    background-size: cover;
+    font-family: 'Computo Monospace', monospace;
+    font-size: 120%;
+    font-weight: bold;
+    line-height: 1.2;
+    white-space: pre;
+     /* Fijar el cuadro en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;  /* Asegura que ocupe toda la pantalla */
+    z-index: 9999;  /* Estar encima de todo lo demás */
+    color: rgb(255, 255, 255);  /* Color blanco para el texto */
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    transition: top 0.5s ease-out; /* Para animar el desplazamiento hacia arriba */
+}
+
+
+/* Contenedor principal de la página */
+#main-content-wrapper {
+    padding-top: 100vh; /* El contenido empieza debajo de la animación */
+    transition: padding-top 0.5s ease-out; /* Para animar el desplazamiento del contenido */
+}
+
+#mainContent {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.show-content {
+    opacity: 1;
+}
+
+
+
+/* General para el nav */
+nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    z-index: 2; /* Asegura que está por encima del fondo */
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal del nav */
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Alinea extremos */
+    align-items: center; /* Centra verticalmente */
+}
+
+/* Clase que se activa cuando se hace scroll */
+.show-content {
+    opacity: 1;
+}
+
+
+/* Contenedor del logo */
+.logo-container {
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente */
+    gap: 10px; /* Espaciado entre el logo y el texto */
+}
+
+/* Imagen del logo */
+.logo-image {
+    width: 40px; /* Tamaño ajustable del logo */
+    height: 40px; /* Tamaño ajustable del logo */
+    object-fit: cover; /* Asegura que el logo se vea bien */
+}
+
+/* Estilo del texto del logo */
+.logo {
+    font-size: 20px; /* Tamaño más visible */
+    color: #fff;
+    font-weight: bold;
+    margin: 0; /* Elimina márgenes innecesarios */
+    white-space: nowrap; /* Evita que el texto salte de línea */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+
+/* Contenedor del menú */
+.menu-container {
+    flex-grow: 1; /* Ocupa el espacio sobrante */
+    display: flex;
+    justify-content: center; /* Centra el menú */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 5%;
+    margin-left: auto; /* Empuja el menú hacia la derecha */
+    margin-right: 10%; /* Asegura que no haya margen extra a la derecha */
+    padding: 0;
+}
+
+
+.nav-links li {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-links li:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px; /* Aumenta el tamaño del texto del menú */
+    white-space: nowrap;
+}
+.hero {
+    background: url('img/anim.gif') no-repeat center center;
+    background-size: cover;
+    color: #752222;
+    text-align: center;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    margin-top: 20px;
+    font-size: 66px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Poppins', sans-serif; /* Cambia la fuente */
+}
+.containerFaQ h2 {
+    font-size: xx-large;
+    text-align: center;
+}
+
+.bloque-titulo {
+    text-align: center;
+    font-size: 28px;
+    margin: 20px 0;
+    color: #ffffff;
+    border-bottom: 1px solid #333;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.containerP {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+
+.containerFaQ {
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.card,
+.card-mentores {
+    border-radius: 10px;
+    background-color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+    overflow: hidden;
+    background: url('img/bg_cards.webp') no-repeat center center/cover;
+    height: 400px;
+    width: 100%;
+}
+
+.colorLink {
+    color: white !important; /* Estado normal */
+}
+
+.colorLink:link {
+    color: white !important; /* Cuando no ha sido visitado */
+}
+
+.colorLink:visited {
+    color: white !important; /* Cuando ya ha sido visitado */
+}
+
+.colorLink:hover {
+    color: white !important; /* Cuando el mouse pasa por encima */
+}
+
+.colorLink:active {
+    color: white !important; /* Cuando se hace clic */
+}
+
+.text-new {
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content,
+.card-content-mentores {
+    padding: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#000;
+    /* Ajustado para mostrar siempre */
+    opacity: 1;
+    /* Cambiado a 1 para que siempre sea visible */
+    transition: opacity 0.3s, background-color 0.3s;
+    /* Añadido background-color a la transición */
+    font-size: large;
+    text-align: center;
+    border: 1px solid white;
+}
+
+.card:hover .card-content,
+.card-mentores:hover .card-content-mentores {
+    opacity: 0.7;
+    /* Ejemplo de cambio al hacer hover */
+    background-color: #fff;
+    /* Cambio de color de fondo al hacer hover */
+    color: #000;
+    /* Cambio de color de texto al hacer hover */
+}
+
+
+.preguntas {
+    padding: 50px 20px;
+    max-width: 1200px;
+    /* Set a max-width to the section */
+    margin: 0 auto;
+    /* Center the section */
+}
+
+.pregunta {
+    margin-bottom: 20px;
+    font-size: x-large;
+}
+
+.respuesta {
+    display: none;
+    font-size: medium;
+}
+
+/* Estilos para los bloques de Preguntas Frecuentes */
+.bloque {
+    background-color: #0c0c0c;
+    border: 1px solid #dddddd50;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-align: left;
+    max-width: 800px;
+    width: 100%;
+    /* Ensure the block takes the full width available */
+    box-sizing: border-box;
+    margin: 20px auto;
+    /* Center the block */
+}
+
+.pregunta,
+.respuesta {
+    text-align: left;
+}
+
+.pregunta h5 {
+    cursor: pointer;
+}
+
+/* Estilos de Footer */
+.footer {
+    background-color: #0a0a0a;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer .footer-text {
+    font-size: 16px;
+    margin: 6px 20;
+}
+
+.footer .footer-text a {
+    color: #83bff7;
+    text-decoration: none;
+    background-color: #000;
+}
+
+.footer .footer-text a:hover {
+    text-decoration: underline;
+}
+
+.flip-vertical-fwd {
+    animation: none;
+    /* Desactiva la animación por defecto */
+}
+
+.flip-vertical-bck {
+    animation: none;
+    /* Desactiva la animación por defecto */
+}
+
+.flip-vertical-fwd {
+
+    animation: flip-vertical-fwd 0.4s forwards;
+}
+
+.flip-vertical-bck {
+    -webkit-animation: flip-vertical-bck 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation: flip-vertical-bck 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+.flip-onclick-forward {
+    animation: flip-vertical-fwd 0.4s forwards;
+}
+
+.flip-onclick-backward {
+    animation: flip-vertical-bck 0.4s forwards;
+}
+
+@keyframes flip-vertical-fwd {
+    0% {
+        transform: rotateY(0);
+    }
+
+    100% {
+        transform: rotateY(180deg);
+    }
+}
+
+.text-new {
+    margin: 10%;
+    animation: counter-flip-vertical-fwd 0.4s forwards;
+}
+
+.new-text-new {
+    margin: 10%;
+}
+
+@keyframes counter-flip-vertical-fwd {
+    0% {
+        transform: rotateY(0);
+    }
+
+    100% {
+        transform: rotateY(-180deg);
+    }
+}
+
+@-webkit-keyframes flip-vertical-bck {
+    0% {
+        -webkit-transform: translateZ(0) rotateY(0);
+        transform: translateZ(0) rotateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateZ(-260px) rotateY(-180deg);
+        transform: translateZ(-260px) rotateY(-180deg);
+    }
+}
+
+@keyframes flip-vertical-bck {
+    0% {
+        -webkit-transform: translateZ(0) rotateY(0);
+        transform: translateZ(0) rotateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateZ(-260px) rotateY(-180deg);
+        transform: translateZ(-260px) rotateY(-180deg);
+    }
+}
+
+/* Estilos para los bloques de Preguntas Frecuentes */
+.bloque {
+    background-color:#000;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+    /* Centrar el contenido del bloque */
+}
+
+.pregunta,
+.respuesta {
+    text-align: center;
+    /* Centrar el contenido de las preguntas y respuestas */
+}
+
+.pregunta h5 {
+    cursor: pointer;
+
+}
+
+/* Estilos de Preguntas Frecuentes */
+.preguntas {
+    background-color: #000000;
+    padding: 50px 0;
+}
+
+.pregunta {
+    margin-bottom: 20px;
+}
+
+.respuesta {
+    display: none;
+
+}
+
+/* Estilos de Galería Fotográfica */
+.galeria {
+    background-color: #000000;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.imagen-destacada {
+    position: relative;
+    width: 80vw;
+    max-width: 600px;
+    height: 400px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.descripcion {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 90%;
+}
+
+
+.carrete {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    /* Para que las imágenes se ajusten en múltiples líneas si es necesario */
+}
+
+.imagen-pequena {
+    width: 15vw;
+    max-width: 150px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    margin: 10px; /* Espaciado entre elementos */
+    cursor: pointer;
+}
+
+.imagen-pequena img {
+    width: 100%;
+    height: 150px; /* Altura fija para que todas las imágenes tengan el mismo tamaño */
+    object-fit: cover; /* Escala las imágenes sin distorsionarlas */
+    border-radius: 5px; /* Opcional: redondea las esquinas */
+}
+
+.imagen-pequena p {
+    font-size: 16px;
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+    line-height: 1.5; /* Mejora la legibilidad */
+    height: auto; /* Asegura que el texto se ajuste bien */
+}
+
+.imagen-destacada img {
+    width: 100%;
+    /* Ajusta el ancho de las imágenes al 100% del contenedor */
+    height: 100%;
+    /* Ajusta la altura de las imágenes al 100% del contenedor */
+    object-fit: cover;
+    /* Escala las imágenes para que cubran todo el contenedor */
+}
+
+
+.prev,
+.next {
+    position: absolute;
+    /* Fija la posición de los botones */
+    top: 50%;
+    /* Centra verticalmente los botones */
+    transform: translateY(-50%);
+    /* Centra verticalmente los botones */
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+    /* Posiciona el botón de retroceso a la izquierda */
+}
+
+.next {
+    right: 10px;
+    /* Posiciona el botón de avance a la derecha */
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Mision, Vision y Valores */
+/* Estilo para hacer las cartas más estrechas y centrarlas */
+.narrow-card,
+.card-mentores {
+    max-width: 500px;
+    /* Ajusta el ancho máximo según lo necesites */
+    margin: 20px auto;
+    /* Centra la carta horizontalmente */
+}
+
+/* Mision, Vision y Valores */
+.MVV {
+    display: flex;
+    justify-content: center;
+    /* Centra las cartas horizontalmente */
+    flex-wrap: wrap;
+    /* Permite que las cartas se ajusten en múltiples líneas si es necesario */
+    align-items: center;
+    /* Alinea los elementos verticalmente al inicio */
+}
+
+
+.MVV .card {
+    margin: 15px;
+    border: 1px solid white;
+}
+
+.texto-botones h1 {
+    margin-bottom: 6px;
+}
+
+.texto-botones {
+    margin-top: 7vh;
+}
+
+.texto-botones .btn {
+    margin-top: -70px;
+    margin-bottom: 5%;
+}
+.grande {
+    margin-top: 4%;
+}
+
+.texto-valores {
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000000;
+    margin-top: 24px;
+    padding: 12px 40px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 22px;
+
+}
+
+.btn:hover {
+    background-color: #525151;
+}
+
+.texto-botones {
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    /*height: 100%;*/
+    /* Asegúrate de que el contenedor tenga una altura para que la alineación vertical funcione */
+    /*margin-top: 60px;*/
+}
+
+.FAQ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4%;
+}
+
+/* Mentores */
+.mentores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mentores h2 {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    color: white;
+    /* Ajusta el color del título */
+}
+
+.mentores .cartas .card-mentores:hover .text-new {
+    display: block;
+    color: black;
+}
+
+
+h3 {
+    font-size: x-large;
+}
+
+.cartas {
+    display: flex;
+    justify-content: center;
+    /* Centra las cartas horizontalmente */
+    width: 100%;
+    /* Asegura que las cartas ocupen todo el ancho disponible */
+}
+
+.cartas .card,
+.cartas .card-mentores {
+    border: 1px solid white;
+    margin: 15px;
+    text-align: center;
+    align-items: center;
+}
+
+/*Animaciones*/
+#rotativa {
+    display: contents;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+}
+
+#rotativa h2 {
+    color: #fff;
+}
+
+#rotativa>div:not(.rotating-text) {
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    /* Centra el texto */
+    font-size: 1.2rem;
+    /* Ajusta el tamaño de fuente según necesites */
+    color: #a8a8a8;
+    /* Cambia el color del texto si es necesario */
+    line-height: 1.5;
+    /* Mejora la legibilidad del texto */
+}
+
+.rotating-text {
+    text-align: center;
+    /*height: 100%;*/
+    width: 100%;
+    margin-top: 4%;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+}
+
+.rotating-text span {
+    font-size: 5em;
+    display: inline-block;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.rotating-text span.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.rotating-text span.out {
+    transform: translateY(-100%);
+}
+
+/*Responsive por menos de 1000px de ancho*/
+@media (max-width: 888px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-content {
+        font-size: medium;
+    }
+
+    #imagenVision {
+        display: none;
+    }
+
+    #imagenEstudio {
+        display: none;
+    }
+
+    .carrete {
+        display: none;
+    }
+
+    .card {
+        border: 1px solid white;
+    }
+
+    .cartas {
+        width: 90%;
+        margin: 3%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .perfiles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textoPerfiles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+
+    .bloque {
+        width: 98%;
+    }
+
+    /*.texto-valores {
+        margin-top: 4%;
+        
+    }*/
+
+    #rotating-text {
+        font-size: small;
+    }
+}
