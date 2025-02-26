@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bits and Atoms</title>
-    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="icon" type="image/png" href="img/logoU.webp">
     <link rel="stylesheet" href="animacion.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -12,31 +12,31 @@
     <div id="square-container">
         <div id="square"></div>
     </div>
+    <nav>
+        <div class="nav-container">
+            <!-- Contenedor del logo alineado a la izquierda -->
+            <div class="logo-container">
+                <img src="img/logoU.webp" alt="Logo" class="logo-image">
+                <h1 class="logo">Bits and Atoms</h1>
+            </div>
+            <!-- Menú de navegación centrado -->
+            <div class="menu-container">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#programa">Programa</a></li>
+                    <li><a href="#mentores">Mentores</a></li>
+                    <!-- <li><a href="#proyectos">Proyectos</a></li> -->
+                    <li><a href="#preguntas">FAQ</a></li>
+                    <li><a href="#podcast">Podcast</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div>
         <div id="main-content-wrapper"> </div>
     </div>
-        <nav>
-            <div class="nav-container">
-                <!-- Contenedor del logo alineado a la izquierda -->
-                <div class="logo-container">
-                    <img src="img/logo.png" alt="Logo" class="logo-image">
-                    <h1 class="logo">Bits and Atoms</h1>
-                </div>
-                <!-- Menú de navegación centrado -->
-                <div class="menu-container">
-                    <ul class="nav-links">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="#nosotros">Nosotros</a></li>
-                        <li><a href="#programa">Programa</a></li>
-                        <li><a href="#mentores">Mentores</a></li>
-                        <!-- <li><a href="#proyectos">Proyectos</a></li> -->
-                        <li><a href="#preguntas">FAQ</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    
-        <div class="container">
+    <div class="container">
                     <div class="card" id="imagenVision">
                 <img src="img/img_brazo.webp" alt="Imagen de decoracion">
             </div>
@@ -262,37 +262,37 @@
         </section>
         </section>
 
-        <section class="galeria" id="proyectos">
+       <!--<section class="galeria" id="proyectos">
             <div class="galeriaFotografica">
                 <h2>Proyectos</h2>
                 <div class="carrete">
                     <div class="imagen-pequena" onclick="showImage(0)">
-                        <!-- <a href="proyectos.html"> -->
+                        <!-- <a href="proyectos.html"> 
                             <img src="img/fatboyHarley.png" alt="Imagen 2">
                         </a>
                         <p> FatBoy Harley</p>
                     </div>
                     <div class="imagen-pequena" onclick="showImage(1)">
-                        <!-- <a href="proyectos.html"> -->
+                        <!-- <a href="proyectos.html"> 
                             <img src="img/glorificador.png" alt="Imagen 1">
                         </a>
                         <p> Glorificador</p>
                     </div>
                     <div class="imagen-pequena" onclick="showImage(2)">
-                        <!-- <a href="proyectos.html"> -->
+                        <!-- <a href="proyectos.html">
                         <img src="img/img_claqueta.webp" alt="Imagen 3">
                         </a>
                         <p> Glorificador</p>
                     </div>
                     <div class="imagen-pequena" onclick="showImage(3)">
-                        <!-- <a href="proyectos.html"> -->
+                        <!-- <a href="proyectos.html">
                             <img src="img/img_brazo.webp" alt="Imagen 4">
                         </a>
                         <p> Glorificador</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         
         
 
@@ -431,8 +431,30 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
+
+
+        <section class="numeros">
+            <button class="flecha flecha-izquierda">←</button>
+            <div class="contenedor-numeros">
+                <ul id="c">
+                    <li><p><strong>Asmae</strong></p><p>Lorem ipsum dolor sit amet.</p></li>
+                    <li><p><strong>Achraf</strong></p><p>Lorem ipsum dolor sit amet.</p></li>
+                    <li><p><strong>Nicolas</strong></p><p>Lorem ipsum dolor sit amet.</p></li>
+                    <li><p><strong>Angelo</strong></p><p>Lorem ipsum dolor sit amet.</p></li>
+                    <li><p><strong>Alex</strong></p><p>Lorem ipsum dolor sit amet.</p></li>
+                    <li><p><strong>Christobal</strong></p><p>Lorem ipsum dolor sit amet.</p></li>
+                    <li><p><strong>Albert</strong></p><p>Lorem ipsum dolor sit amet.</p></li>
+                    <li><p><strong>Karolayn</strong></p><p>Lorem ipsum dolor sit amet.</p></li>
+                    <li><p><strong>Brayan</strong></p><p>Lorem ipsum dolor sit amet.</p></li>
+                    <li><p><strong>Eric</strong></p><p>Lorem ipsum dolor sit amet.</p></li>
+                    <li><p><strong>Joel</strong></p><p>Lorem ipsum dolor sit amet.</p></li>
+                    <li><p><strong>Joshua</strong></p><p>Lorem ipsum dolor sit amet.</p></li> 
+                </ul>
+            </div>
+            <button class="flecha flecha-derecha">→</button>
+        </section>
+        
         <div class="texto-valores">
             <h3>Aprende haciendo, innova creando</h3>
         </div>
@@ -443,13 +465,15 @@
         </div>
         <!-- Footer -->
         <footer class="footer">
-            <p class="footer-text">Copyright © 2024 Instituto Europeo IA - Todos los derechos reservados.</p>
+            <p class="footer-text">Copyright 2024 Instituto Europeo IA - Todos los derechos reservados.</p>
             <p class="footer-text">Contáctanos: <a href="mailto:info@ieu.ai">info@ieu.ai</a></p>
             <p class="footer-text">Carrer de Bretón de los Herreros, 9, Gràcia, 08012 Barcelona</p>
         </footer>
     
         <script src="animacion.js"></script>
         <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </body>
 
 </html>

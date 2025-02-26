@@ -1,35 +1,37 @@
 const mask = [
-"                        @@@@@@@@@@@@@@@@@@@@@                      ",
-"                   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                  ",
-"                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                ",
-"             @@@@@@@@@@@@@@@@@@@@@@@@@@@@   @@@@@@@@@@@             ",
-"          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@      @@@@@@@@@          ",
-"        @@@@@@@@@@@@@@          @@@@@@@@@@@@@        @@@@@@@        ",
-"       @@@@@@@@@@@@@@@   @@@@    @@@@@@@@@@@@@        @@@@@@@@      ",
-"     @@@@@@@@@@@@@@@@@   @@@@    @@@@@@@@@@@@@          @@@@@@@     ",
-"    @@@@@@@@@@@@@@@@@@          @@@@@@@@@@@@@@@@          @@@@@@    ",
-"   @@@@@@@@@@@@@@@@@@@   @@@@    @@@@@@@@@@@@@@@            @@@@@  ",
-"  @@@@@@@@@@@@@@@@@@@@   @@@@    @@@@@@@@@@@@@@              @@@@@  ",
-" @@@@@@@@@@@@@@@@@@@@@          @@@@@@@@@@@@@@@               @@@@ ",
-" @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                 @@@@@ ",
-" @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                        @@@@ ",
-"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                           @@@@@",
-"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                @@@@@",
-"@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                     @@@@@",
-"@@@@@@@@@@@@@@@@@@@@@@@@@@              @@@                     @@@@@",
-"@@@@@@@@@@@@@@@@@@@@@@@@@             @@@@@                    @@@@@",
-"@@@@@@@@@@@@@@@@@@@@@@@@            @@@ @@@                  @@@@@",
-" @@@@@@@@@@@@@@@@@@@@@@@            @@@   @@@                  @@@@@ ",
-"   @@@@@@@@@@@@@@@@@@@@           @@@@@@@@@@@                @@@@@ ",
-"    @@@@@@@@@@@@@@@@@@@@         @@@       @@@             @@@@@@  ",
-"     @@@@@@@@@@@@@@@@@@         @@@         @@@           @@@@@@   ",
-"      @@@@@@@@@@@@@@@@@@                              @@@@@@@@     ",
-"        @@@@@@@@@@@@@@@@@                           @@@@@@@@       ",
-"          @@@@@@@@@@@@@@@@@                       @@@@@@@          ",
-"            @@@@@@@@@@@@@@@@                  @@@@@@@@@            ",
-"               @@@@@@@@@@@@@@@             @@@@@@@@@@@             ",
-"                   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                  ",
-"                        @@@@@@@@@@@@@@@@@@@@@                      "
+    "                                     %@*@@@%                                     ",
+    "                          @@@@@@*@@@@@@###@@@@@@@@@@@@@                          ",
+    "                     @@@@@@@@@@@@@@@@@@@@@@*#@@@@@@@@@@*@@@@                     ",
+    "                 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@       @@@@@@*@@@*@               ",
+    "             @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@         @@@@@@*@@              ",
+    "           @@@*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@           @@@@@@@@           ",
+    "         *@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@            @@@@*@@         ",
+    "       @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@             &@@@@*@       ",
+    "     @@@*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@               @@@@@@      ",
+    "    #@@&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                @@&*@@    ",
+    "   @@*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#                 @@@*@@   ",
+    "  #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                   &@@@@@  ",
+    "  @@%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                     @@%@@  ",
+    " @@*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                       @@@@@ ",
+    " @@@@@@  ___ ___ _____ ___     _   _  _ ___      _ _____ ___  __  __ ___   &@&@@ ",
+    " @@@@@  | _ )_ _|_   _/ __|   /_\\ | \\| |   \\    /_\\_   _/ _ \\|  \\/  / __|   @@@@ ",
+    " @*@@@  | _ \\| |  | | \\__ \\  / _ \\| .` | |) |  / _ \\| || (_) | |\\/| \\__ \\   @@*@ ",
+    " @@@@@  |___/___| |_| |___/ /_/ \\_\\_|\\_|___/  /_/ \\_\\_| \\___/|_|  |_|___/   @@@@ ",
+    " @@%@@@                                                                    @@#@@ ",
+    " @@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                             @@@@@ ",
+    "  @@#@@@@@@@@@@@@@@@@@@@@@@@@                                             @@#@@  ",
+    "  @@@@@@@@@@@@@@@@@@@@@@@@@%                                             @@@@@,  ",
+    "   @@@@@@@@@@@@@@@@@@@@@@@@                                             @@@@@#   ",
+    "    @@@@@@@@@@@@@@@@@@@@@@@                                            @@@@@@    ",
+    "      @@@@@@@@@@@@@@@@@@@@@                                          @@@**@@     ",
+    "       *@@@@@@@@@@@@@@@@@@@@                                       @@@@@@@       ",
+    "         @@@@@@@@@@@@@@@@@@@&                                    @@@@@*@         ",
+    "            @@@@@@@@@@@@@@@@@@                                @@@@@@@            ",
+    "             @@@*@%@@@@@@@@@@@@@                          &@@@%@*@@              ",
+    "                 @@@@*@@@@@@@@@@@@@@                ,@@@@@@@@@@@                 ",
+    "                     #*@@@*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#                     ",
+    "                          ,**@@@*@@@@@*@@@@@@@@@@@@@@@                           ",
+    "                                     %@*@@@%                                     "
 ];
 
 function getRandomChar() {
@@ -46,7 +48,7 @@ function generateSquare() {
         let newLine = '';
         for (let charIndex = 0; charIndex < mask[lineIndex].length; charIndex++) {
             const char = mask[lineIndex][charIndex];
-            if (char === ' ' || (char >= 'A' && char <= 'Z') || (char >= 'a' && char <= 'z') || (char >= '0' && char <= '9') || char === '|' || char === '_' || char === '\\' || char === '/' || char === ')'|| char === '.' || char === '`' || char === '(' ) {
+            if (char === ' ' || (char >= 'A' && char <= 'Z') || (char >= 'a' && char <= 'z') || (char >= '0' && char <= '9') || char === '|' || char === '_' || char === '\\' || char === '/' || char === ')' || char === '.' || char === '`' || char === '(') {
                 newLine += char;
             } else {
                 newLine += getRandomChar();
@@ -66,6 +68,64 @@ function revealNextChar() {
         revealIndex++;
     }
 }
+
+// Función para mostrar el navbar cuando la animación del logo esté completa
+function checkRevealComplete() {
+    const totalChars = mask.length * mask[0].length;
+    if (revealIndex >= totalChars * 0.1) { // Mostrar el navbar cuando el logo esté al 10% revelado
+        const nav = document.querySelector('nav');
+        nav.classList.add('show-content');
+        // Llamar a handleNavbarScroll inmediatamente para posicionar el navbar correctamente
+        handleNavbarScroll();
+    }
+}
+
+// Función para manejar el scroll del navbar
+function handleNavbarScroll() {
+    const nav = document.querySelector('nav');
+    const square = document.getElementById('square-container');
+    const squareBottom = square.getBoundingClientRect().bottom;
+
+    if (squareBottom <= 0) {
+        nav.classList.add('fixed');
+    } else {
+        nav.classList.remove('fixed');
+    }
+}
+
+// Añadir evento de scroll
+window.addEventListener('scroll', handleNavbarScroll);
+
+// Llamar a handleNavbarScroll una vez al inicio para posicionar correctamente el navbar
+window.addEventListener('load', handleNavbarScroll);
+
+// Intervalo para generar caracteres aleatorios
+setInterval(generateSquare, 90); // Ajusta la velocidad de generación de caracteres aquí
+
+// Intervalo para revelar las líneas de la máscara
+setInterval(() => {
+    revealNextChar();
+    checkRevealComplete();
+}, 0.10); // Ajusta la velocidad de aparición de las líneas aquí
+
+// Intervalo para generar la espiral de fondo
+setInterval(generateSpiral, 500); // Ajusta la velocidad de actualización de la espiral aquí
+
+// Detectar el evento de scroll
+window.addEventListener('scroll', () => {
+    const square = document.getElementById('square');
+    const contentWrapper = document.getElementById('main-content-wrapper');
+
+    // Cuando el usuario hace scroll, mueve la animación hacia arriba
+    if (window.scrollY > 0) {
+        square.style.top = `-${window.scrollY}px`; // Mueve la animación hacia arriba con el scroll
+        contentWrapper.style.paddingTop = '0'; // El contenido se desplaza hacia arriba
+    } else {
+        // Cuando el scroll vuelve a ser 0, la animación se coloca en su posición inicial
+        square.style.top = '0';
+        contentWrapper.style.paddingTop = '100vh'; // Vuelve a poner el contenido debajo de la animación
+    }
+});
 
 // Función para generar una espiral de caracteres aleatorios
 function generateSpiral() {
@@ -92,28 +152,3 @@ function generateSpiral() {
         angle += angleIncrement;
     }
 }
-
-// Intervalo para generar caracteres aleatorios
-setInterval(generateSquare, 90); // Ajusta la velocidad de generación de caracteres aquí
-
-// Intervalo para revelar las líneas de la máscara
-setInterval(revealNextChar, .10); // Ajusta la velocidad de aparición de las líneas aquí
-
-// Intervalo para generar la espiral de fondo
-setInterval(generateSpiral, 500); // Ajusta la velocidad de actualización de la espiral aquí
-
-// Detectar el evento de scroll
-window.addEventListener('scroll', () => {
-    const square = document.getElementById('square');
-    const contentWrapper = document.getElementById('main-content-wrapper');
-
-    // Cuando el usuario hace scroll, mueve la animación hacia arriba
-    if (window.scrollY > 0) {
-        square.style.top = `-${window.scrollY}px`;  // Mueve la animación hacia arriba con el scroll
-        contentWrapper.style.paddingTop = '0';  // El contenido se desplaza hacia arriba
-    } else {
-        // Cuando el scroll vuelve a ser 0, la animación se coloca en su posición inicial
-        square.style.top = '0';
-        contentWrapper.style.paddingTop = '100vh';  // Vuelve a poner el contenido debajo de la animación
-    }
-});

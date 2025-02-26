@@ -5,34 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programa Académico</title>
-    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="icon" type="image/png" href="img/logoU.webp">
+    <link rel="stylesheet" href="animacion.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <div id="square-container">
+        <div id="square"></div>
+    </div>
     <nav>
         <div class="nav-container">
             <!-- Contenedor del logo alineado a la izquierda -->
             <div class="logo-container">
-                <img src="img/logo.png" alt="Logo" class="logo-image">
+                <img src="img/logoU.webp" alt="Logo" class="logo-image">
                 <h1 class="logo">Bits and Atoms</h1>
             </div>
             <!-- Menú de navegación centrado -->
             <div class="menu-container">
                 <ul class="nav-links">
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
                     <li><a href="#programa">Programa</a></li>
-                    <li><a href="#mentores">Mentores</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#preguntas">FAQ</a></li>
+                    <li><a href="index.html#mentores">Mentores</a></li>
+                    <!-- <li><a href="#proyectos">Proyectos</a></li> -->
+                    <li><a href="index.html#preguntas">FAQ</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <header class="hero">
-        <h1>¡Bits and Atoms!</h1>
-    </header>
+    <div>
+        <div id="main-content-wrapper"> </div>
+    </div>
     <div class="containerP">
         <main>
             <section id="programa">
@@ -96,6 +100,8 @@
             <p class="footer-text">Carrer de Bretón de los Herreros, 9, Gràcia, 08012 Barcelona</p>
         </div>
     </footer>
+    <script src="animacion.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
